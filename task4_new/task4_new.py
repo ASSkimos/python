@@ -23,7 +23,7 @@ def to_string(text):
     return str
 
 
-# опреление некорректного символа:
+# определение некорректного символа:
 # param=0 для начала переменной
 # param=1 для конца переменной
 def incorrect_symbol(symbol, param):
@@ -45,7 +45,8 @@ def get_var(row):
                     end_digits = False
                 var = row[j] + var
                 j = j - 1
-            list.append(var)
+            if not incorrect_symbol(var[0],0):
+                list.append(var)
     return list
 
 
